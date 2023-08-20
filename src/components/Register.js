@@ -35,7 +35,12 @@ export const Register = () => {
                         name="repeatPass"
                     />
                     <div className="gender">
-                        <input type="radio" name="gender" id="female" defaultValue="female" />
+                        <input 
+                            type="radio" 
+                            name="gender" 
+                            id="female" 
+                            defaultValue="female" 
+                        />
                         <label htmlFor="female">Female</label>
                         <input
                             type="radio"

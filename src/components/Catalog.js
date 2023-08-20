@@ -24,6 +24,5 @@ export const Catalog = () => {
                 <p className="no-memes">No memes in database.</p>
             </div>
         </section>
-
     );
 };
