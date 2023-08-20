@@ -7,6 +7,7 @@ import { Register } from './components/Register';
 import { Catalog } from './components/Catalog';
 import { Create } from './components/Create';
 import { Edit } from './components/Edit';
+import { Profile } from './components/Profile';
 
 function App() {
 	return (
@@ -21,6 +22,7 @@ function App() {
 						<Route path="/catalog" element={<Catalog />} />
 						<Route path="/create-meme" element={<Create />} />
 						<Route path="/edit" element={<Edit />} />
+						<Route path="/profile" element={<Profile />} />
 					</Routes>
 				</main>
 			</div>
