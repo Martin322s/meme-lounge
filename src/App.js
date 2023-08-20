@@ -6,9 +6,13 @@ function App() {
 	return (
 		<>
 			<Navigation />
-			<Routes>
+			<div id="container">
+				<main>
+					<Routes>
 
-			</Routes>
+					</Routes>
+				</main>
+			</div>
 			<Footer />
 		</>
 	);
