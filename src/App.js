@@ -1,5 +1,6 @@
 import { Routes } from 'react-router-dom';
 import { Navigation } from './components/common/Navigation';
+import { Footer } from './components/common/Footer';
 
 function App() {
 	return (
@@ -8,6 +9,7 @@ function App() {
 			<Routes>
 
 			</Routes>
+			<Footer />
 		</>
 	);
 }
