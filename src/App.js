@@ -23,6 +23,7 @@ function App() {
 						<Route path="/create-meme" element={<Create />} />
 						<Route path="/edit" element={<Edit />} />
 						<Route path="/profile" element={<Profile />} />
+						<Route path="/logout" element={<h1>Logout</h1>} />
 					</Routes>
 				</main>
 			</div>
