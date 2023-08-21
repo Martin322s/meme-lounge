@@ -1,7 +1,18 @@
 import { Link } from "react-router-dom";
 import debugging from './images/2.png';
+import * as memeService from '../services/memeService';
+import { useEffect, useState } from "react";
 
 export const Catalog = () => {
+    const [memes, setMemes] = useState([]);
+
+    useEffect(() => {
+        memeService.getAll()
+            .then(memes => setMemes(memes));
+    }, []);
+
+    console.log(memes);
+
     return (
         <section id="meme-feed">
             <h1>All Memes</h1>
