@@ -10,8 +10,6 @@ export const Catalog = () => {
             .then(memes => setMemes(memes));
     }, []);
 
-    console.log(memes);
-
     return (
         <section id="meme-feed">
             <h1>All Memes</h1>
