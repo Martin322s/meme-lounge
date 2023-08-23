@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Navigation } from './components/common/Navigation';
 import { Footer } from './components/common/Footer';
 import { Home } from './components/Home';
-import { Login } from './components/Login';
+import { Login } from './components/Login/Login';
 import { Register } from './components/Register';
 import { Catalog } from './components/Catalog';
 import { Create } from './components/Create';
