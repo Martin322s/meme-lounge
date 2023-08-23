@@ -7,7 +7,7 @@ export const useStorage = (key, values) => {
 
         if (storageState) {
             const persistedState = JSON.parse(storageState);
-            setState(persistedState);
+            return persistedState;
         }
 
         return values;
@@ -15,6 +15,7 @@ export const useStorage = (key, values) => {
 
     const setStorageData = (newValues) => {
         localStorage.setItem('session', newValues);
+        setState(newValues);
     }
 
     return [
