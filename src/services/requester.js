@@ -16,6 +16,27 @@ const requester = {
         } catch (err) {
             return err;
         }
+    },
+
+    post: async (url, headers = {}, data) => {
+        try {
+            const res = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    ...headers
+                },
+                body: JSON.stringify(data)
+            });
+
+            if (res.ok) {
+                return res.json();
+            } else {
+                throw new Error(`Reqeust failed: Status code: ${res.status}`);
+            }
+        } catch (err) {
+            return err;
+        }
     }
 };
 
