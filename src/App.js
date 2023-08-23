@@ -9,10 +9,11 @@ import { Create } from './components/Create';
 import { Edit } from './components/Edit';
 import { Profile } from './components/Profile';
 import { Details } from './components/Details';
+import { AuthContextProvider } from './contexts/AuthContext';
 
 function App() {
 	return (
-		<>
+		<AuthContextProvider>
 			<Navigation />
 			<div id="container">
 				<main>
@@ -30,7 +31,7 @@ function App() {
 				</main>
 			</div>
 			<Footer />
-		</>
+		</AuthContextProvider>
 	);
 }
 
