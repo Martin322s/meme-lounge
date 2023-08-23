@@ -14,7 +14,7 @@ export const useStorage = (key, values) => {
     });
 
     const setStorageData = (newValues) => {
-        localStorage.setItem('session', newValues);
+        localStorage.setItem('session', JSON.stringify(newValues));
         setState(newValues);
     }
 
