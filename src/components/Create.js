@@ -6,6 +6,7 @@ import { Error } from "./Error/Error";
 
 export const Create = () => {
     const { user } = useContext(AuthContext);
+    const [error, setError] = useState(false);
     const navigate = useNavigate();
 
     const [data, setData] = useState({
@@ -28,13 +29,13 @@ export const Create = () => {
             memeService.createMeme(values, user.accessToken)
                 .then(() => navigate('/catalog'));
         } else {
-            alert('All fields must be filled correctly!');
+            setError(true);
         }
     }
 
     return (
         <section id="create-meme">
-            <Error />
+            {error && <Error text="All fields must be filled correctly!" />}
             <form id="create-form" onSubmit={(e) => submitHandler(e, data)}>
                 <div className="container">
                     <h1>Create Meme</h1>
