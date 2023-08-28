@@ -4,12 +4,12 @@ import * as userService from '../services/authService';
 import { Navigate } from "react-router-dom";
 
 export const Logout = () => {
-    const { user, userLogout } = useContext(AuthContext);
+    const { user, logoutUser } = useContext(AuthContext);
 
     useEffect(() => {
         userService.logoutUser(user.accessToken)
-            .then(() => userLogout())
-    }, [user.accessToken, userLogout]);
+            .then(() => logoutUser())
+    }, [user.accessToken, logoutUser]);
 
     return <Navigate to="/" />
 };

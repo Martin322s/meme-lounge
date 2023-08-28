@@ -9,6 +9,9 @@ const requester = {
             });
 
             if (res.ok) {
+                if (res.url.includes('/logout')) {
+                    return {};
+                }
                 return res.json();
             } else {
                 throw new Error(`Reqeust failed: Status code: ${res.status}`);
