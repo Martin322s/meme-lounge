@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import * as memeService from '../services/memeService';
 import { AuthContext } from "../contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
+import { Error } from "./Error/Error";
 
 export const Create = () => {
     const { user } = useContext(AuthContext);
@@ -33,6 +34,7 @@ export const Create = () => {
 
     return (
         <section id="create-meme">
+            <Error />
             <form id="create-form" onSubmit={(e) => submitHandler(e, data)}>
                 <div className="container">
                     <h1>Create Meme</h1>
