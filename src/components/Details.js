@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import * as memeService from '../services/memeService';
+import { AuthContext } from "../contexts/AuthContext";
 
 export const Details = () => {
+    const { user } = useContext(AuthContext);
     const { memeId } = useParams();
     const [meme, setMeme] = useState({});
 
@@ -25,10 +27,17 @@ export const Details = () => {
                     <p>
                         {meme.description}
                     </p>
-                    <Link className="button warning" to={`/edit/${meme._id}`}>
-                        Edit
-                    </Link>
-                    <button className="button danger">Delete</button>
+                    {user._id === meme._ownerId
+                        ?
+                        <>
+                            <Link className="button warning" to={`/edit/${meme._id}`}>
+                                Edit
+                            </Link>
+                            <button className="button danger">Delete</button>
+                        </>
+                        :
+                        null
+                    }
                 </div>
             </div>
         </section>

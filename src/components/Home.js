@@ -14,8 +14,8 @@ export const Home = () => {
                     <>
                         <h2>Login to see our memes right away!</h2>
                         <div id="button-div">
-                            <Link to="/" className="button">Login</Link>
-                            <Link to="/" className="button">Register</Link>
+                            <Link to="/login" className="button">Login</Link>
+                            <Link to="/register" className="button">Register</Link>
                         </div>
                     </>
                     : null
