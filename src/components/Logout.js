@@ -7,8 +7,8 @@ export const Logout = () => {
     const { user, logoutUser } = useContext(AuthContext);
 
     useEffect(() => {
-        userService.logoutUser(user.accessToken)
-            .then(() => logoutUser())
+        userService.logoutUser(user.accessToken);
+        logoutUser();
     }, [user.accessToken, logoutUser]);
 
     return <Navigate to="/" />

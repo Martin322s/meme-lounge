@@ -1,6 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import * as memeService from '../services/memeService';
+import { AuthContext } from "../contexts/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 export const Create = () => {
+    const { user } = useContext(AuthContext);
+    const navigate = useNavigate();
+
     const [data, setData] = useState({
         title: '',
         description: '',
@@ -16,7 +22,13 @@ export const Create = () => {
 
     const submitHandler = (e, values) => {
         e.preventDefault();
-        console.log(values);
+
+        if (!Object.values(values).some(x => x === '')) {
+            memeService.createMeme(values, user.accessToken)
+                .then(() => navigate('/catalog'));
+        } else {
+            alert('All fields must be filled correctly!');
+        }
     }
 
     return (
