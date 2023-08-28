@@ -10,6 +10,7 @@ import { Edit } from './components/Edit';
 import { Profile } from './components/Profile';
 import { Details } from './components/Details';
 import { AuthContextProvider } from './contexts/AuthContext';
+import { Logout } from './components/Logout';
 
 function App() {
 	return (
@@ -26,7 +27,7 @@ function App() {
 						<Route path="/details/:memeId" element={<Details />} />
 						<Route path="/edit" element={<Edit />} />
 						<Route path="/profile" element={<Profile />} />
-						<Route path="/logout" element={<h1>Logout</h1>} />
+						<Route path="/logout" element={<Logout />} />
 					</Routes>
 				</main>
 			</div>
