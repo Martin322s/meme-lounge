@@ -4,3 +4,5 @@ const localUrl = 'http://localhost:3030/data';
 
 export const getAll = () => requester.get(`${localUrl}/memes?sortBy=_createdOn%20desc`);
 export const getOne = (memeId) => requester.get(`${localUrl}/memes/${memeId}`);
+export const createMeme = (data, token) =>
+    requester.post(`${localUrl}/memes`, { 'X-Authorization': token }, data);
