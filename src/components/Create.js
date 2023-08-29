@@ -33,6 +33,10 @@ export const Create = () => {
         }
     }
 
+    setTimeout(() => {
+        setData(false);
+    }, 3000);
+
     return (
         <section id="create-meme">
             {error && <Error text="All fields must be filled correctly!" />}
