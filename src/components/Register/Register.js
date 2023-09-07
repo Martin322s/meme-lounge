@@ -1,13 +1,20 @@
 import { useReducer } from "react";
 import { Link } from "react-router-dom";
 import { initialState, reducer } from "./data/data";
+import { changeHandler } from "../../utils/handleChangeEvent";
 
 export const Register = () => {
     const [state, dispatch] = useReducer(reducer, initialState);
-    
+
+    const submitHandler = (ev, data) => {
+        ev.preventDefault();
+
+        console.log(data);
+    };
+
     return (
         <section id="register">
-            <form id="register-form">
+            <form id="register-form" onSubmit={(ev) => submitHandler(ev, state)}>
                 <div className="container">
                     <h1>Register</h1>
                     <label htmlFor="username">Username</label>
@@ -16,13 +23,19 @@ export const Register = () => {
                         type="text"
                         placeholder="Enter Username"
                         name="username"
+                        autoComplete="username"
+                        value={state.username}
+                        onChange={(ev) => changeHandler(ev, dispatch)}
                     />
                     <label htmlFor="email">Email</label>
-                    <input 
-                        id="email" 
-                        type="text" 
-                        placeholder="Enter Email" 
-                        name="email" 
+                    <input
+                        id="email"
+                        type="text"
+                        placeholder="Enter Email"
+                        name="email"
+                        autoComplete="email"
+                        value={state.email}
+                        onChange={(ev) => changeHandler(ev, dispatch)}
                     />
                     <label htmlFor="password">Password</label>
                     <input
@@ -30,6 +43,9 @@ export const Register = () => {
                         type="password"
                         placeholder="Enter Password"
                         name="password"
+                        autoComplete="new-password"
+                        value={state.password}
+                        onChange={(ev) => changeHandler(ev, dispatch)}
                     />
                     <label htmlFor="repeatPass">Repeat Password</label>
                     <input
@@ -37,21 +53,26 @@ export const Register = () => {
                         type="password"
                         placeholder="Repeat Password"
                         name="repeatPass"
+                        autoComplete="rePass"
+                        value={state.repeatPass}
+                        onChange={(ev) => changeHandler(ev, dispatch)}
                     />
                     <div className="gender">
-                        <input 
-                            type="radio" 
-                            name="gender" 
-                            id="female" 
-                            defaultValue="female" 
-                        />
+                        <input
+                            type="radio"
+                            name="gender"
+                            id="female"
+                            value="female"
+                            onChange={(ev) => changeHandler(ev, dispatch)}
+                            />
                         <label htmlFor="female">Female</label>
                         <input
                             type="radio"
                             name="gender"
                             id="male"
-                            defaultValue="male"
-                            defaultChecked=""
+                            defaultChecked="male"
+                            value="male"
+                            onChange={(ev) => changeHandler(ev, dispatch)}
                         />
                         <label htmlFor="male">Male</label>
                     </div>

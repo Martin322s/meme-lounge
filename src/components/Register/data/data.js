@@ -3,12 +3,17 @@ export const initialState = {
     email: '',
     password: '',
     repeatPass: '',
-    gender: '',
+    gender: 'male',
 };
 
 export function reducer(state, action) {
     switch(action.type) {
         case 'SET_FIELD': return {
+            ...state,
+            [action.field]: action.value
+        }
+
+        case 'SET_RADIO_BUTTON': return {
             ...state,
             [action.field]: action.value
         }
