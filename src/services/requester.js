@@ -10,7 +10,7 @@ const requester = {
 
             if (res.ok) {
                 if (res.url.includes('/logout')) {
-                    return {};
+                    return res;
                 }
                 return res.json();
             } else {
