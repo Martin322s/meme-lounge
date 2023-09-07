@@ -3,7 +3,7 @@ import { Navigation } from './components/common/Navigation';
 import { Footer } from './components/common/Footer';
 import { Home } from './components/Home';
 import { Login } from './components/Login/Login';
-import { Register } from './components/Register';
+import { Register } from './components/Register/Register';
 import { Catalog } from './components/Catalog';
 import { Create } from './components/Create';
 import { Edit } from './components/Edit';

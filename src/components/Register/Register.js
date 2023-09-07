@@ -1,6 +1,10 @@
+import { useReducer } from "react";
 import { Link } from "react-router-dom";
+import { initialState, reducer } from "./data/data";
 
 export const Register = () => {
+    const [state, dispatch] = useReducer(reducer, initialState);
+    
     return (
         <section id="register">
             <form id="register-form">
