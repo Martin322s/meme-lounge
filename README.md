@@ -14,7 +14,7 @@ This documentation outlines the requirements for the GitHub project "Application
 - For logged-in users, the navigation bar should include links to the All Memes page, Create Meme, Welcome, user's email address, My Profile, and a Logout action.
 
 ### User Navigation Example:
-![User Navigation Example](user_navigation_example.png)
+Guests (un-authenticated visitors) can see the links to the Home Page, All Memes page, as well as the links to the Login and Register pages. 
 
 ### Guest Navigation Example:
-![Guest Navigation Example](guest_navigation_example.png)
+The logged-in user navbar should contain the links to All Memes page, the Create Meme page, Welcome, { user’s email address }, My Profile page and a link for the Logout action.
