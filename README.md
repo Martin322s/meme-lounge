@@ -24,3 +24,11 @@ The logged-in user navbar should contain the links to All Memes page, the Create
 - The initial screen should display navigation, register, login options, an initial image, and a footer.
 - This page should only be visible to guest users.
 - Logged-in users should be redirected to the All Memes page.
+
+- ## 3. Login User (5 pts)
+
+- Provide a form for existing user authentication.
+- Users can log in by providing their email and password.
+- If any fields are empty, display an error.
+- Upon successful login, redirect the user to the All Memes page.
+- Handle errors or validation issues with appropriate error messages using a system dialog (window.alert).
