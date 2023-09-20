@@ -47,3 +47,12 @@ The logged-in user navbar should contain the links to All Memes page, the Create
 - Send a GET request to perform logout.
 - Upon successful logout, clear any session information stored in browser storage.
 - Redirect the user to the Home page after logout.
+
+## 6. Create Meme Screen (15 pts)
+
+- Available to logged-in users only.
+- Display a form for creating a new meme.
+- Check that all fields are filled before sending the request.
+- Send a POST request to create a meme.
+- Redirect the user to the All Memes page upon successful creation.
+
