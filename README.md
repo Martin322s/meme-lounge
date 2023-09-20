@@ -93,3 +93,9 @@ The logged-in user navbar should contain the links to All Memes page, the Create
 - The user's gender determines the avatar displayed.
 - If the user has no memes, display a specific view.
 - Send a GET request to retrieve the user's memes.
+
+## 12. Bonus: Notifications (10 pts)
+
+- Display error notifications that disappear after 3 seconds in case of user-related errors.
+- Errors may include validation errors or error messages from the REST service.
+- Implement this feature on the Register, Login, Create, and Edit pages.
