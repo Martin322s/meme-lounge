@@ -25,10 +25,18 @@ The logged-in user navbar should contain the links to All Memes page, the Create
 - This page should only be visible to guest users.
 - Logged-in users should be redirected to the All Memes page.
 
-- ## 3. Login User (5 pts)
+## 3. Login User (5 pts)
 
 - Provide a form for existing user authentication.
 - Users can log in by providing their email and password.
 - If any fields are empty, display an error.
 - Upon successful login, redirect the user to the All Memes page.
+- Handle errors or validation issues with appropriate error messages using a system dialog (window.alert).
+
+  ## 4. Register User (10 pts)
+
+- Allow users to register by providing a username, email, password, and gender (Male or Female).
+- All fields are required, and empty fields should trigger an error message.
+- Send a POST request to perform registration.
+- Upon successful registration, redirect the user to the All Memes page.
 - Handle errors or validation issues with appropriate error messages using a system dialog (window.alert).
