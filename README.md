@@ -62,3 +62,10 @@ The logged-in user navbar should contain the links to All Memes page, the Create
 - Guests and logged-in users should have access to this page.
 - If there are no memes, display a specific view.
 - Send a GET request to read the list of memes sorted by creation date.
+
+## 8. Meme Details (10 pts)
+
+- Allow all users to view details about memes.
+- Clicking on the Details link of a meme card should display the Details page.
+- If the logged-in user is the meme creator, display Edit and Delete buttons; otherwise, hide them.
+- Send a GET request to read a single meme by its ID.
