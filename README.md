@@ -18,3 +18,9 @@ Guests (un-authenticated visitors) can see the links to the Home Page, All Memes
 
 ### Guest Navigation Example:
 The logged-in user navbar should contain the links to All Memes page, the Create Meme page, Welcome, { user’s email address }, My Profile page and a link for the Logout action.
+
+## 2. Home Screen (5 pts)
+
+- The initial screen should display navigation, register, login options, an initial image, and a footer.
+- This page should only be visible to guest users.
+- Logged-in users should be redirected to the All Memes page.
