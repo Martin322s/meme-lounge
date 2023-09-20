@@ -78,3 +78,10 @@ The logged-in user navbar should contain the links to All Memes page, the Create
 - Check that all fields are filled before sending the request.
 - Send a PUT request to update the meme.
 - Redirect the user to the Details page upon successful update.
+
+## 10. Delete Meme (10 pts)
+
+- Available to logged-in users who have created the meme.
+- Display a confirmation dialog before deleting a meme.
+- Send a DELETE request to delete the meme.
+- Redirect the user to the All Memes page upon successful deletion.
