@@ -69,3 +69,12 @@ The logged-in user navbar should contain the links to All Memes page, the Create
 - Clicking on the Details link of a meme card should display the Details page.
 - If the logged-in user is the meme creator, display Edit and Delete buttons; otherwise, hide them.
 - Send a GET request to read a single meme by its ID.
+
+## 9. Edit Meme Screen (15 pts)
+
+- Available to logged-in users.
+- Clicking the Edit link of a particular meme on the Details page should display the Edit page.
+- Pre-fill the form with existing meme data.
+- Check that all fields are filled before sending the request.
+- Send a PUT request to update the meme.
+- Redirect the user to the Details page upon successful update.
