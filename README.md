@@ -56,3 +56,9 @@ The logged-in user navbar should contain the links to All Memes page, the Create
 - Send a POST request to create a meme.
 - Redirect the user to the All Memes page upon successful creation.
 
+## 7. All Memes (10 pts)
+
+- Display a list of all memes in the system.
+- Guests and logged-in users should have access to this page.
+- If there are no memes, display a specific view.
+- Send a GET request to read the list of memes sorted by creation date.
