@@ -85,3 +85,11 @@ The logged-in user navbar should contain the links to All Memes page, the Create
 - Display a confirmation dialog before deleting a meme.
 - Send a DELETE request to delete the meme.
 - Redirect the user to the All Memes page upon successful deletion.
+
+## 11. User Profile (10 pts)
+
+- Allow logged-in users to view their own profile.
+- Display the user's username, email, and My memes count.
+- The user's gender determines the avatar displayed.
+- If the user has no memes, display a specific view.
+- Send a GET request to retrieve the user's memes.
