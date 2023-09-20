@@ -40,3 +40,10 @@ The logged-in user navbar should contain the links to All Memes page, the Create
 - Send a POST request to perform registration.
 - Upon successful registration, redirect the user to the All Memes page.
 - Handle errors or validation issues with appropriate error messages using a system dialog (window.alert).
+
+## 5. Logout (5 pts)
+
+- Provide a Logout action for logged-in users.
+- Send a GET request to perform logout.
+- Upon successful logout, clear any session information stored in browser storage.
+- Redirect the user to the Home page after logout.
